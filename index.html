@@ -1,0 +1,34 @@
+<html>
+<body>
+</body>
+
+
+<script>
+	var i =0;
+	console.log("Hello");
+	for(i = 30; i <= 300; i++){
+		var myObj = multiplenumber(i);
+		console.log(myObj);
+	}	
+	function writeaz(){
+		var first = "a", last = "z", str="";
+		for(var i = first.charCodeAt(0); i <= last.charCodeAt(0); i++) {
+			str += (eval("String.fromCharCode(" + i + ")"));
+		}
+		return str;
+	}
+	function multiplenumber(x){
+		if(x % 7 == 0){
+			if(x % 13 == 0){
+				return writeaz();
+			}else {
+				return 'abc';	
+			}
+		}
+		else if( x % 13 == 0){
+			return 'xyz';
+		}
+			return x;
+	}
+</script>
+</html>
